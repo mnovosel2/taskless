@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	.menu
+		ul.nav.nav-tabs
+			li
+				a(href="/") Home
+			li
+				a(href="/tasks") Tasks
+			li.active
+				a(href="/tasks/completed") Completed
+		ul.completed_tasks
+			each task,i in tasks
+				li= i+1+'. '+task.desc 
